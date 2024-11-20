@@ -1,13 +1,68 @@
 ---
-import Badge from '../components/Badge.astro';
-import Layout from '../layouts/Layout.astro';
+import Badge from "../components/Badge.astro";
 
+import Layout from "../layouts/Layout.astro";
+
+import Skill from "../components/Skill.astro";
+import Experience from "../components/Experience.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<section class="w-full lg:w-[740px] mx-auto py-44">
-		<h1 class="text-white text-5xl font-bold flex justify-center flex-row">Hey, soy Andrés Felipe Murillo <Badge>Disponible</Badge></h1>
-		<h2>+2 años de experiencia. Desarrollador Full Stack. De Colombia Medellín. Especializado en crear aplicaciones unicas </h2>
+<Layout title="Andres Murillo">
+  <section class="py-16 md:py-24 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+    <div class="max-w-xl">
+      <div class="flex flex-row items-center gap-x-3">
+        <img
+          class="rounded-full w-16 h-16"
+          src="data:image/jpeg;base64,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"
+          alt="fotoAndrew"
+        />
+        <Badge name="To a tope"></Badge>
+      </div>
 
-	</section>
+      <div class="mt-2">
+        <h1 class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4">
+          Hey, soy Andrés Felipe Murillo        
+        </h1>
+        <h2 class="opacity-80 mt-4 text-xl text-wrap">
+          <span>+2 años de experiencia.</span>
+          <span class="text-yellow-300">
+            Ingeniero en Desarrollador de Software Full Stack.</span
+          >
+          <span class="text-red-200/90">De Medellín, Colombia</span>.
+          <span class="opacity-85"
+            >Especializado en crear aplicaciones únicas.
+          </span>
+        </h2>
+      </div>     
+      
+      <div class="flex flex-wrap items-center justify-start gap-3 mt-6">
+        <Skill name="LinkeIn">          
+          <svg  slot="icon" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
+        </Skill>
+        <Skill name="GitHub">          
+          <svg slot="icon" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" /></svg>       
+        </Skill>
+        <Skill name="Angular">     
+          <svg  slot="icon" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-angular"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.428 17.245l6.076 3.471a1 1 0 0 0 .992 0l6.076 -3.471a1 1 0 0 0 .495 -.734l1.323 -9.704a1 1 0 0 0 -.658 -1.078l-7.4 -2.612a1 1 0 0 0 -.665 0l-7.399 2.613a1 1 0 0 0 -.658 1.078l1.323 9.704a1 1 0 0 0 .495 .734z" /><path d="M9 15l3 -8l3 8" /><path d="M10 13h4" /></svg>             
+        </Skill>
+        <Skill name="C#">          
+          <svg slot="icon"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-c-sharp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 9a3 3 0 0 0 -3 -3h-.5a3.5 3.5 0 0 0 -3.5 3.5v5a3.5 3.5 0 0 0 3.5 3.5h.5a3 3 0 0 0 3 -3" /><path d="M16 7l-1 10" /><path d="M20 7l-1 10" /><path d="M14 10h7.5" /><path d="M21 14h-7.5" /></svg>     
+        </Skill>
+        <Skill name="Tailwind-CSS">          
+          <svg slot="icon"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tailwind"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z" /></svg>
+        </Skill>
+        
+        <Skill name="SQL Server">          
+          <svg slot="icon"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-server"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M7 8l0 .01" /><path d="M7 16l0 .01" /></svg>
+        </Skill>
+     
+      </div>
+      
+    </div>
+
+  </section>
+
+  <section class="py-16 md:py-24 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+    <Experience/>
+  </section>
 </Layout>

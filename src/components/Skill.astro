@@ -1,0 +1,14 @@
+---
+interface Props{
+    name:string
+}
+
+const {name} = Astro.props
+---
+
+<span class="rounded-e-full rounded-s-full bg-gray-800 px-4 border-b-2 border hover:cursor-pointer text-slate-100 hover:bg-white hover:text-black">
+    <div class="flex flex-row items-center justify-center gap-x-2 py-1">
+        <slot  name="icon"></slot>
+        <p class="opacity-70  text-sm hover:text-black font-bold">{name}</p>    
+    </div>    
+</span>
