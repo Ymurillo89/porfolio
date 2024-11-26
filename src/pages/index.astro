@@ -5,6 +5,8 @@ import Layout from "../layouts/Layout.astro";
 
 import Skill from "../components/Skill.astro";
 import Experience from "../components/Experience.astro";
+import Project from "../components/Project.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout title="Andres Murillo">
@@ -182,5 +184,13 @@ import Experience from "../components/Experience.astro";
 
   <section class="py-16 md:py-24 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
     <Experience />
+  </section>
+
+  <section class="py-2 md:py-2 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+    <Project/>
+  </section>
+
+  <section class="py-2 md:py-2 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+    <AboutMe/>
   </section>
 </Layout>
