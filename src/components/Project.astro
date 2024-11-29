@@ -4,50 +4,63 @@ import ItemProject from "./ItemProject.astro";
 const DATA_PROJECT = [
   {
     img: "",
-    title: "Freelance",
-    description:"",
-    framework:[
+    title: "Aplicación de Gestión de Requerimientos",
+    description: "Esta plataforma permite a los usuarios recolectar y visualizar los requerimientos de proyectos, así como seguir su estado y progreso en tiempo real. Los desarrolladores pueden actualizar el avance de los proyectos, registrar actividades realizadas y documentar cualquier cambio.Los usuarios tienen acceso instantáneo a la información actualizada sobre el estado de cada proyecto, lo que facilita el seguimiento y la toma de decisiones. ",
+    framework: [
       {
-        name:"Angular",
-        icon:""
+        name: "Angular",
+        icon: "",
       },
       {
-        name:"Angular2",
-        icon:""
-      }
-
+        name: "Angular2",
+        icon: "",
+      },
     ],
-    
-  }, 
+  },
   {
     img: "",
-    title: "Freelance",
-    description:"",
-    framework:[
+    title: "ABBA Negocios Inmobiliarios",
+    description: " En esta plataforma, los usuarios pueden explorar diferentes inmuebles, ver detalles importantes como el precio, la ubicación y características de cada propiedad. ",
+    framework: [
       {
-        name:"Angular",
-        icon:""
+        name: "Angular",
+        icon: "",
       },
       {
-        name:"Angular2",
-        icon:""
-      }
-
+        name: "Angular2",
+        icon: "",
+      },
     ],
-    
-  }, 
+  },
 ];
 ---
 
 <div class="flex flex-row items-center gap-5 mb-10">
-  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-code" ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"></path></svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="34"
+    height="34"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path
+      d="M14 4l-4 16"></path></svg
+  >
   <h3 class="text-3xl font-bold">Proyectos</h3>
 </div>
 
 {
-  DATA_PROJECT.map(e=>(
-    <ItemProject img={e.img} title={e.title} description={e.description} frameworks={e.framework} />
+  DATA_PROJECT.map((e) => (
+    <ItemProject
+      img={e.img}
+      title={e.title}
+      description={e.description}
+      frameworks={e.framework}
+    />
   ))
 }
