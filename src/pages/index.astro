@@ -1,6 +1,6 @@
 ---
 import Badge from "../components/Badge.astro";
-
+import perfil from '../assets/img/perfil.png'; 
 import Layout from "../layouts/Layout.astro";
 
 import Skill from "../components/Skill.astro";
@@ -15,7 +15,7 @@ import AboutMe from "../components/AboutMe.astro";
       <div class="flex flex-row items-center gap-x-3">
         <img
           class="rounded-full w-24 h-24"
-          src="../../public/img/perfil.png"
+          src={perfil.src}
           alt="fotoDesarrollador"
         />
         <Badge name="Preprado para programar" />

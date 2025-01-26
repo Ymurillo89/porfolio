@@ -3,7 +3,7 @@ import IconAngular from './IconAngular.astro';
 import IconWordPress from './IconWordPress.astro';
 
 interface Props {
-  img: string;
+  img: any;
   title: string;
   description: string;
   frameworks: any;
@@ -19,7 +19,7 @@ const { img, title, description, frameworks } = Astro.props;
     >
       <img
         class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-        src={img}
+        src={img.src}
         alt="Img"
       />
     </div>
