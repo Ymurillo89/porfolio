@@ -1,39 +1,32 @@
 ---
+import IconAngular from "./IconAngular.astro";
 import ItemProject from "./ItemProject.astro";
 
 const DATA_PROJECT = [
   {
-    img: "",
+    img: "../assets/img/gestionRequerimiento.png",
     title: "Aplicación de Gestión de Requerimientos",
     description: "Esta plataforma permite a los usuarios recolectar y visualizar los requerimientos de proyectos, así como seguir su estado y progreso en tiempo real. Los desarrolladores pueden actualizar el avance de los proyectos, registrar actividades realizadas y documentar cualquier cambio.Los usuarios tienen acceso instantáneo a la información actualizada sobre el estado de cada proyecto, lo que facilita el seguimiento y la toma de decisiones. ",
     framework: [
       {
-        name: "Angular",
-        icon: "",
-      },
-      {
-        name: "Angular2",
-        icon: "",
-      },
+        name: "Angular",       
+      },    
     ],
   },
   {
-    img: "",
+    img: "../assets/img/abbaNegocios.png",
     title: "ABBA Negocios Inmobiliarios",
     description: " En esta plataforma, los usuarios pueden explorar diferentes inmuebles, ver detalles importantes como el precio, la ubicación y características de cada propiedad. ",
     framework: [
       {
-        name: "Angular",
-        icon: "",
-      },
-      {
-        name: "Angular2",
-        icon: "",
-      },
+        name: "WordPress",  
+      },      
     ],
   },
 ];
 ---
+
+
 
 <div class="flex flex-row items-center gap-5 mb-10">
   <svg
